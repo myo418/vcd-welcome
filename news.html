@@ -1,0 +1,15 @@
+---
+title: お知らせ一覧
+layout: default
+---
+
+<h1>お知らせ</h1>
+<ul>
+  {% for post in site.posts %}
+  <a href={{ post.url }} >
+      <div>
+        <div>{{ post.title }}</div>
+        <div>{{ post.date | date: "%Y年%-m月%-d日 %H:%M" }}</div>
+  </div></a>
+  {% endfor %}
+</ul>
